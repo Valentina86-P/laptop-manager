@@ -1,20 +1,21 @@
-// app/page.tsx
+import { getRedis } from "@/lib/redis";
 
-export default function Home() {
+// Read from Redis every time the page loads
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const redis = await getRedis();
+  const text = await redis.hGetAll("homepage"); // all homepage text from the cache
+
   return (
     <section className="page">
-      <p className="eyebrow">Laptop Manager</p>
-      <h1>Home</h1>
-      <p className="description">
-        A simple product management app for laptops, built with Next.js and PocketBase.
-      </p>
+      <p className="eyebrow">{text.eyebrow}</p>
+      <h1>{text.title}</h1>
+      <p className="description">{text.description}</p>
 
       <div className="card">
-        <h2>Welcome!</h2>
-        <p>
-          Use this app to view, add, edit and delete laptops in stock.
-          Go to Products to see the full list.
-        </p>
+        <h2>{text.welcomeTitle}</h2>
+        <p>{text.welcomeText}</p>
       </div>
     </section>
   );
