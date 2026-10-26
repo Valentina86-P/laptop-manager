@@ -26,7 +26,16 @@ export default function RootLayout({
             <span>＋</span>
             Add
           </Link>
+
+          <Link href="/admin">
+            <span>▥</span>
+            Admin
+          </Link>
         </nav>
+
+        
+
+
         
       </body>
     </html>
