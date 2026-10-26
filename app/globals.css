@@ -1,0 +1,159 @@
+/* app/globals.css */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #f7f7f8;
+  color: #171717;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.page {
+  padding: 56px 22px 24px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #777;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+  letter-spacing: -1.2px;
+}
+
+.description {
+  margin: 12px 0 30px;
+  color: #6b6b6b;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card {
+  padding: 22px;
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+  color: #777;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: white;
+  color: #171717;
+  font: inherit;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #999;
+}
+
+/* Mobile bottom navigation */
+.bottomNav {
+  position: fixed;
+  z-index: 100;
+  right: 16px;
+  bottom: max(14px, env(safe-area-inset-bottom));
+  left: 16px;
+
+  display: flex;
+  max-width: 568px;
+  margin: auto;
+  padding: 8px;
+
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #e8e8e8;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+}
+
+.bottomNav a {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+
+  padding: 8px;
+  border-radius: 14px;
+
+  color: #666;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bottomNav a:active {
+  background: #f0f0f0;
+  transform: scale(0.97);
+}
+
+.bottomNav span {
+  color: #171717;
+  font-size: 22px;
+}
+
+
+.error { color: #c62828; font-weight: 600; }
+
+/* ---------- Laptop Manager ---------- */
+.productGrid { display: grid; gap: 12px; margin-top: 16px; }
+.productCard { display: block; padding: 16px; border-radius: 16px; background: #fff;
+  border: 1px solid #e5e5e5; text-decoration: none; color: inherit; }
+.productCard:hover { border-color: #999; }
+.productCard h2 { margin: 4px 0; font-size: 1.1rem; }
+.brand { font-size: 0.8rem; text-transform: uppercase; color: #777; letter-spacing: 0.05em; }
+.price { font-weight: 700; margin-top: 6px; }
+
+.form { display: grid; gap: 14px; margin-top: 16px; }
+.field { display: grid; gap: 6px; }
+.field label { font-weight: 600; font-size: 0.9rem; }
+.field input, .field textarea { padding: 10px 12px; border: 1px solid #ccc; border-radius: 10px;
+  font: inherit; background: #fff; }
+.field textarea { min-height: 100px; resize: vertical; }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.btn { display: inline-block; padding: 10px 16px; border-radius: 10px; border: none;
+  background: #111; color: #fff; font: inherit; cursor: pointer; text-decoration: none; }
+.btn:disabled { opacity: 0.5; cursor: default; }
+.btnSecondary { background: #e5e5e5; color: #111; }
+.btnDanger { background: #c62828; }
+.error { color: #c62828; font-weight: 600; }
